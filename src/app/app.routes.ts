@@ -18,5 +18,10 @@ export const routes: Routes = [
         path: 'details/:id',
         component: DetailsComponent,
         title: 'Details Page'
+    },
+    {
+        path: 'homes',
+        component: HomesComponent,
+        title: 'Home page'
     }
 ];

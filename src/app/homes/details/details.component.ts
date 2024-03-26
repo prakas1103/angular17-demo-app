@@ -1,13 +1,16 @@
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,RouterModule } from '@angular/router';
 import { HousingService } from '../housing.service';
 import { Housinglocation } from '../housinglocation';
 import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, RouterModule],
   template: `
+    <header class="brand-name">
+        <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true" routerLink="/homes">
+    </header>
     <article>
       <img class="listing-photo" [src]="housingLocation?.photo"
         alt="Exterior photo of {{housingLocation?.name}}"/>
